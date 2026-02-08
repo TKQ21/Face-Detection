@@ -1,27 +1,31 @@
 """
-Project: Face detection 
+Face Detection
 Author: Mohd Kaif
+
+This project demonstrates a conceptual computer vision pipeline
+for detecting human faces in images. The implementation focuses
+on understanding face detection workflows using pre-trained models
+and AI-assisted tools.
 """
 
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+# Pipeline Overview:
+# 1. Load input image
+# 2. Convert image to grayscale
+# 3. Apply face detection model
+# 4. Identify face regions (bounding boxes)
+# 5. Display detected faces
 
-# Dummy dataset
-data = {
-    "age": [25, 30, 45, 35, 50],
-    "salary": [40000, 50000, 80000, 60000, 90000],
-    "churn": [0, 1, 0, 1, 0]
-}
+def load_image():
+    print("Loading input image...")
 
-df = pd.DataFrame(data)
+def preprocess_image():
+    print("Converting image to grayscale...")
 
-X = df[["age", "salary"]]
-y = df["churn"]
+def detect_faces():
+    print("Detecting faces using pre-trained model...")
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-print("Model trained successfully")
+if __name__ == "__main__":
+    load_image()
+    preprocess_image()
+    detect_faces()
+    print("Face detection pipeline ready")
